@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be Moii Valentine kunjooii moi future wifey?</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #ffebf0;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        h1 {
+            color: #f185ff;
+            font-size: 2.5em;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .yes-btn {
+            background-color: #f185ff;
+            color: white;
+            font-size: 24px;
+        }
+
+        .no-btn {
+            background-color: white;
+            color: #ff4d6d;
+            border: 2px solid #ff4d6d;
+            position: absolute;
+        }
+
+        .hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .heart {
+            position: absolute;
+            color: #ff4d6d;
+            font-size: 20px;
+            animation: float 3s linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Will You Be Moi Valentine kutto? ❤️</h1>
+    
+    <div class="buttons">
+        <button class="btn yes-btn" id="yesBtn">YESHH!</button>
+        <button class="btn no-btn" id="noBtn">No</button>
+    </div>
+
+    <div class="hearts" id="hearts"></div>
+
+    <script>
+        let yesBtn = document.getElementById("yesBtn");
+        let noBtn = document.getElementById("noBtn");
+
+        // Move "No" button randomly
+        noBtn.addEventListener("mouseover", function () {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 100);
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+
+            // Make "Yes" button bigger
+            let currentSize = parseFloat(window.getComputedStyle(yesBtn).fontSize);
+            yesBtn.style.fontSize = (currentSize + 5) + "px";
+            yesBtn.style.padding = (parseFloat(yesBtn.style.padding) + 5) + "px";
+        });
+
+        // Floating heart effect
+        function createHeart() {
+            let heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤️";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+            document.getElementById("hearts").appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 3000);
+        }
+
+        setInterval(createHeart, 500);
+
+        // Yes button click event
+        yesBtn.addEventListener("click", function () {
+            document.body.innerHTML = "<h1>hehehe!😙🙈I Love You!🫶😙And odkka🙂 njn pokko nii🙂 and ith oru 2hrs kond indakkiyatha soo kaanan valya chugam kaanula I'm chowwy🙂</h1>";
+        });
+    </script>
+
+</body>
+</html>
